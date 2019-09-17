@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styleWork.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1><%=ListTitle%> LIST</h1>
+    </div>
+    <div class="box">
+
+        <% for (var i=0; i<newListItems.length; i++){ %>
+        <div class="item">
+            <input class="checkbox" type="checkbox">
+
+            <p><%=newListItems[i]%></p>
+        </div>
+
+        <% } %>
+
+
+        <form action="/work" method="post">
+
+            <input type="text" name="newItem" placeholder="Today I will..." autocomplete="off">
+            <button type="submit" name="listWork" value=<%= ListTitle %>>+</button>
+
+
+        </form>
+        <div>
+
+            <a href="/"> <button class="workButton" type="submit"><%=currentday%> List</button></a>
+
+        </div>
+
+    </div>
+    <script>
+        $('.checkbox').on('click', function () {
+            $(this).parent().fadeOut(500, function () {
+                $(this).remove();
+            });
+
+        });
+    </script>
+    <%-include("footer")-%>

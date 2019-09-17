@@ -1,0 +1,111 @@
+html {
+    /* background: linear-gradient(to right, #11998e, #38ef7d); */
+    background-image: url('images/pexels-photo-1483938.jpeg');
+      min-height: 1000px;
+      font-family: 'helvetica neue';
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+    }
+   
+    h1 {
+      color: #fff;
+      padding: 10px;
+    }
+    
+    .box {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    
+    #heading {
+      background-color: #AC4816;
+      text-align: center;
+    }
+    
+    .item {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #F1F1F1;
+    }
+    
+    .item:last-child {
+      border-bottom: 0;
+    }
+    
+    input:checked+p {
+      text-decoration: line-through;
+      text-decoration-color: #AC4816;
+    }
+    
+    input[type="checkbox"] {
+      margin: 20px;
+    }
+    
+    p {
+      margin: 0;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: 200;
+      color: #00204a;
+    }
+    
+    form {
+      text-align: center;
+      margin-left: 20px;
+    }
+    
+    button {
+      min-height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      border-color: transparent;
+      background-color:#AC4816;
+      color: #fff;
+      font-size: 40px;
+      border-width: 0;
+      transition-duration: 0.4s;
+      margin-top: 8px;
+    }
+    .workButton{
+       min-height: 55px;
+      width: 55px; 
+      font-size: 15px;
+      position: absolute;
+      border-radius: 12px; 
+      margin-bottom: 12px;
+      margin-top: 6px; 
+    
+    }
+    input[type="text"] {
+      text-align: center;
+      height: 60px;
+      top: 10px;
+      border: none;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 200;
+      width: 313px;
+    }
+    
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: inset 0 -3px 0 0#AC4816;
+    }
+    
+    ::placeholder {
+      color: grey;
+      opacity: 1;
+    }
+    
+    footer {
+      color: white;
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    

@@ -1,0 +1,43 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+    <h1><%=ListTitle%> LIST</h1>
+
+</div>
+
+<div class="box">
+
+
+    <% for (var i=0; i<newListItems.length; i++){ %>
+    <div class="item">
+        <input class="checkbox" type="checkbox">
+
+        <p><%=newListItems[i]%></p>
+    </div>
+
+    <% } %>
+
+
+    <form action="/" method="post">
+
+        <input type="text" name="newItem" placeholder="Today I will..." autocomplete="off">
+        <button type="submit" name="listt" value=<%= ListTitle %>>+</button>
+
+    </form>
+    <div>
+
+        <a href="/Work"> <button class="workButton" type="submit">Work list</button></a>
+
+    </div>
+</div>
+
+<script>
+    $('.checkbox').on('click', function () {
+        $(this).parent().fadeOut(500, function () {
+            $(this).remove();
+        });
+
+    });
+</script>
+
+<%- include("footer") -%>
